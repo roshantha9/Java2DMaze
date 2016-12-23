@@ -7,7 +7,4 @@ public class Java2DMaze {
 		System.out.println("Starting 2D Maze");
 
 	}
-
-	
-	
 }
