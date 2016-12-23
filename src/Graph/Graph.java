@@ -4,7 +4,7 @@ import java.util.*;
 
 /**
 * <h1>Graph</h1>
-* Graph class implements undirectd graphs using 
+* Graph class implements undirected graphs using 
 * adjacency lists
 * <p>
 *
