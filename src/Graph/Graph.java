@@ -36,9 +36,9 @@ public class Graph {
 	
 	
 	
-	/*
-	 *	Getters and setters
-	 */
+	//================================================
+	// Getters/setters 
+	//================================================
 	public int getV(){
 		return this.V;
 	}
