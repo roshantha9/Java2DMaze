@@ -28,7 +28,7 @@ public class Graph {
 		this.adj = new ArrayList<ArrayList<Integer>>(); // initialise
 		this.E = 0;
 		
-		// add V number of vertices
+		// add V number of vertices : adj is now a 2D array
 		for(int i=0; i<V; i++){
             this.adj.add(new ArrayList<Integer>());
         }
@@ -39,12 +39,17 @@ public class Graph {
 	//================================================
 	// Getters/setters 
 	//================================================
-	public int getV(){
-		return this.V;
+	public int getV(){ 
+		return this.V; // number of vertices
 	}
 	public int getE(){
-		return this.E;
+		return this.E; // number of edges
 	}
+	
+	public ArrayList<ArrayList<Integer>> getAdj(){
+		return this.adj;
+	}
+	
 	
 	
 	
@@ -78,13 +83,13 @@ public class Graph {
         validateVertex(v);
         validateVertex(w);
         
-        if (this.hasEdge(v, w)){
-        	throw new IllegalArgumentException("Error: Edge already exists ! - " + v + "," + w);
+        if (!this.hasEdge(v, w)){
+        	//throw new IllegalArgumentException("Error: Edge already exists ! - " + v + "," + w);
+        	this.E++;        
+            adj.get(v).add(w);
+            this.E++;
+            adj.get(w).add(v);
         }
-        
-        this.E++;        
-        adj.get(v).add(w);
-        adj.get(w).add(v);
     }
 	
 	
